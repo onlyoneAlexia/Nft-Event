@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "hardhat/console.sol";
+
 
 contract EventRegistration {
     // Defined a struct to store event details
@@ -27,7 +27,7 @@ contract EventRegistration {
     event ParticipantRegistered(uint256 indexed eventId, address participant, uint256 nftId);
     event ParticipantDeregistered(uint256 indexed eventId, address participant, uint256 nftId);
 
-    // Function to create a new event
+    
     function createEvent(string memory _name, uint256 _startTime, uint256 _endTime, address _nftAddress) external {
         // Validate input parameters
         require(_startTime < _endTime, "Invalid time range");
